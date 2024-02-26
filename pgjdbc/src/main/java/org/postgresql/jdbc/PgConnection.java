@@ -1015,6 +1015,7 @@ public class PgConnection implements BaseConnection {
   public void rollback() throws SQLException {
 
     throw new PSQLException(GT.tr("THE NULLIFIED ROLLBACK METHOD WAS CALLED."),
+        PSQLState.NO_ACTIVE_SQL_TRANSACTION);
 
     /*
     THE ORIGINAL BIT OF CODE:
