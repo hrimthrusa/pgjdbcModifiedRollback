@@ -1013,6 +1013,12 @@ public class PgConnection implements BaseConnection {
 
   @Override
   public void rollback() throws SQLException {
+
+    throw new PSQLException(GT.tr("THE NULLIFIED ROLLBACK METHOD WAS CALLED."),
+
+    /*
+    THE ORIGINAL BIT OF CODE:
+
     checkClosed();
 
     if (autoCommit) {
@@ -1026,6 +1032,8 @@ public class PgConnection implements BaseConnection {
       // just log for debugging
       LOGGER.log(Level.FINE, "Rollback requested but no transaction in progress");
     }
+     */
+
   }
 
   @Override
